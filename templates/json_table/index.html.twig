@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}API Datatable{% endblock %}
+ {% block stylesheets %}
+     {{ encore_entry_link_tags('json') }}
+ {% endblock %}
+ {% block javascripts %}
+     {{ encore_entry_script_tags('json') }}
+ {% endblock %}
+
+{% block body %}
+    <div class="container-fluid p-5 mt-5">
+
+
+        <div class="row">
+            <div class="col-3 p-2">
+
+                 <textarea class="form-control" id="json-data" rows="20" placeholder="Enter a JSON Data"></textarea>
+                 <div id='generate' class="d-flex justify-content-between py-2"></div>
+            </div>
+            <div class=" col-9 ">
+                <div class="d-flex justify-content-between">
+                    <div id='buttons1' class="d-flex justify-content-between py-2"></div>
+                    <div id='buttons2' class="d-flex justify-content-between py-2"></div>
+                </div>
+                <table id="json" class="table table-hover table-bordered table-striped" style="width:100%">
+                    <thead>
+                    <tr>
+                        <th >ID</th>
+                        <th >NAME</th>
+                        <th >SERIAL</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+
+    </div>
+{% endblock %}

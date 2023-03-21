@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}API Datatable{% endblock %}
+ {% block stylesheets %}
+
+     {{ encore_entry_link_tags('responsive') }}
+ {% endblock %}
+ {% block javascripts %}
+
+     {{ encore_entry_script_tags('responsive') }}
+ {% endblock %}
+
+{% block body %}
+    <div class="container-fluid p-5 mt-5">
+        <div id='btn_export' class="d-flex justify-content-between py-2">
+            <h6> Export Buttons</h6>
+        </div>
+
+    <div class="d-flex justify-content-center align-items-center">
+        <table id="responsive" class="table table-bordered table-striped table-bordered" style="width:100%">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Extn.</th>
+                <th>Start date</th>
+                <th>Salary</th>
+            </tr>
+            </thead>
+            <tfoot>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Extn.</th>
+                <th>Start date</th>
+                <th>Salary</th>
+            </tr>
+            </tfoot>
+        </table>
+    </div>
+    </div>
+{% endblock %}

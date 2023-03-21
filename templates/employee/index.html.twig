@@ -1,0 +1,79 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}API Datatable{% endblock %}
+ {% block stylesheets %}
+     {{ encore_entry_link_tags('api') }}
+ {% endblock %}
+ {% block javascripts %}
+     {{ encore_entry_script_tags('api') }}
+ {% endblock %}
+
+{% block body %}
+    <div class="container-fluid p-5 mt-5">
+
+        <div id='buttons1' class="d-flex justify-content-between py-2">
+            <h6> Export Buttons</h6>
+        </div>
+        <div id='buttons2' class="d-flex justify-content-between py-2">
+            <h6> Select_rows Counter Add_Remove_Btn</h6>
+        </div>
+        <div id='buttons3' class="d-flex justify-content-between py-2">
+            <h6> Colvis colvisGroup</h6>
+        </div>
+        <div id='buttons4' class="d-flex justify-content-between py-2">
+            <h6> Dropdown_Menu_Collection</h6>
+        </div>
+        <div id='buttons5' class="d-flex justify-content-between py-2">
+            <h6> Custom Buttons</h6>
+        </div>
+        <div id='buttons6' class="d-flex justify-content-between py-2">
+            <h6> Simple Buttons</h6>
+        </div>
+{#        <div id='hideColumn' class="d-flex justify-content-between py-2"></div>#}
+        <div id='selectSearch' class="d-flex justify-content-between py-2"></div>
+
+        <div class="d-flex justify-content-center align-items-center">
+
+                <table id="api_dt" class="table table-hover table-bordered table-striped responsive " style="width:100%">
+                    <thead>
+                    <tr>
+                        <th >ACTION</th>
+                        <th >FIRSTNAME</th>
+                        <th >LASTNAME</th>
+                        <th >POSITION</th>
+                        <th >SALARY</th>
+                        <th >NEW LETTER</th>
+                        <th >EMAIL</th>
+                        <th >BIRTHDAY</th>
+                        <th >COMPANY</th>
+                        <th > </th>
+
+
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                    <tfoot>
+                        <th >ACTION</th>
+                        <th >FIRSTNAME</th>
+                        <th >LASTNAME </th>
+                        <th >POSITION</th>
+                        <th >SALARY</th>
+                        <th >NEW LETTER</th>
+                        <th >EMAIL</th>
+                        <th >BIRTHDAY</th>
+                        <th >COMPANY</th>
+                        <th > </th>
+
+                    </tfoot>
+                </table>
+        </div>
+
+        <div class="d-flex justify-content-between">
+            <div id="container" style="width:100%; height:400px;"></div>
+            <div id="container1" style="width:100%; height:400px;"></div>
+        </div>
+
+    </div>
+{% endblock %}
